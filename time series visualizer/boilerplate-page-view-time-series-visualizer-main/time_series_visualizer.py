@@ -11,7 +11,7 @@ df = pd.read_csv('fcc-forum-pageviews.csv', index_col = ['date'], parse_dates = 
 df = df[((df['value']) >= (df['value']).quantile(0.025)) &
         ((df['value']) <= (df['value']).quantile(0.975))]
 
-
+print(df.shape[0])
 print(df.count(numeric_only=True))
 
 def draw_line_plot():
